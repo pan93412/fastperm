@@ -1,17 +1,52 @@
+// Copyright 2022 pan93412
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+//
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+
+//! FastPerm - A dead-simple, extreme fast permission flag system for Rust.
+
 /// Add a permission flag (`n`) to `perm`.
+/// 
+/// # Example
+/// 
+/// ```
+/// # use fastperm::add;
+/// 
+/// assert_eq!(add(0, 1), 2);
+/// ```
 #[inline]
 pub const fn add(perm: usize, n: usize) -> usize {
     perm | 1 << n
 }
 
-// 
 /// Remove a permission flag (`n`) to `perm`.
+/// 
+/// # Example
+/// 
+/// ```
+/// # use fastperm::rm;
+/// 
+/// assert_eq!(rm(2, 1), 0);
+/// ```
 #[inline]
 pub const fn rm(perm: usize, n: usize) -> usize {
     perm & !(1 << n)
 }
 
 /// Check if `perm` has the permission flag `n`.
+/// 
+/// # Example
+/// 
+/// ```
+/// # use fastperm::check;
+/// 
+/// assert!(check(2, 1));
+/// assert!(!check(2, 3));
+/// ```
 #[inline]
 pub const fn check(perm: usize, n: usize) -> bool {
     (perm >> n & 1) == 1

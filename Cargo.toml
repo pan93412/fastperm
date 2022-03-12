@@ -1,5 +1,8 @@
 [package]
 name = "fastperm"
+description = "A dead-simple, extreme fast permission flag system for Rust."
+authors = ["pan93412 <pan93412@gmail.com>"]
+license = "Apache-2.0"
 version = "0.1.0"
 edition = "2021"
 
