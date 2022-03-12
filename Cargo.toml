@@ -1,6 +1,6 @@
 [package]
 name = "fastperm"
-description = "A dead-simple, extreme fast permission flag system for Rust."
+description = "A dead-simple, extreme fast permission flag system for Rust with no dependencies."
 repository = "https://github.com/pan93412/fastperm"
 keywords = ["permission", "flag", "simple", "fast", "add", "rm", "check"]
 categories = ["rust-patterns"]
