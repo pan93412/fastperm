@@ -15,7 +15,6 @@
 /// 
 /// ```
 /// # use fastperm::add;
-/// 
 /// assert_eq!(add(0, 1), 2);
 /// ```
 #[inline]
@@ -29,7 +28,6 @@ pub const fn add(perm: usize, n: usize) -> usize {
 /// 
 /// ```
 /// # use fastperm::rm;
-/// 
 /// assert_eq!(rm(2, 1), 0);
 /// ```
 #[inline]
@@ -43,7 +41,6 @@ pub const fn rm(perm: usize, n: usize) -> usize {
 /// 
 /// ```
 /// # use fastperm::check;
-/// 
 /// assert!(check(2, 1));
 /// assert!(!check(2, 0));
 /// assert!(!check(2, 3));
