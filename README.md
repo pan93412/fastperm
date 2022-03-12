@@ -17,6 +17,11 @@ assert_eq!(rm(2, 1), 0);
 assert!(check(2, 1));
 ```
 
+Credit
+---
+
+- <https://www.xiebruce.top/1772.html>
+
 Authors
 ---
 
