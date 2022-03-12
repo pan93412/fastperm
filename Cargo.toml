@@ -6,7 +6,7 @@ keywords = ["permission", "flag", "simple", "fast", "manage"]
 categories = ["rust-patterns"]
 authors = ["pan93412 <pan93412@gmail.com>"]
 license = "Apache-2.0"
-version = "1.0.1"
+version = "1.0.2"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
