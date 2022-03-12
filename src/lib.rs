@@ -7,7 +7,26 @@
 //
 //    http://www.apache.org/licenses/LICENSE-2.0
 
-//! FastPerm - A dead-simple, extreme fast permission flag system for Rust.
+//! # FastPerm
+//! 
+//! A dead-simple, extreme fast permission flag system for Rust.
+//! 
+//! ## Usage
+//! 
+//! ```
+//! use fastperm::{add, rm, check};
+//! 
+//! // Add a flag to a permission digit.
+//! assert_eq!(add(0, 1), 2);
+//! // Remove a flag from a permission digit.
+//! assert_eq!(rm(2, 1), 0);
+//! // Check if a flag is in a permission digit.
+//! assert!(check(2, 1));
+//! ```
+//! 
+//! ## Credit
+//! 
+//! - <https://www.xiebruce.top/1772.html>
 
 /// Add a permission flag `n` to a permission digit `perm`
 /// 
