@@ -96,6 +96,10 @@ mod tests {
         assert!(!super::check(5, WRITE));
         assert!(super::check(5, READ));
 
+        assert!(!super::check(3, EXEC));
+        assert!(super::check(3, WRITE));
+        assert!(super::check(3, READ));
+
         assert!(super::check(4, EXEC));
         assert!(!super::check(4, WRITE));
         assert!(!super::check(4, READ));
