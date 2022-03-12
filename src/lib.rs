@@ -9,7 +9,7 @@
 
 //! FastPerm - A dead-simple, extreme fast permission flag system for Rust.
 
-/// Add a permission flag (`n`) to `perm`.
+/// Add a permission flag `n` to a permission digit `perm`
 /// 
 /// # Example
 /// 
@@ -23,7 +23,7 @@ pub const fn add(perm: usize, n: usize) -> usize {
     perm | 1 << n
 }
 
-/// Remove a permission flag (`n`) to `perm`.
+/// Remove a flag `n` from a permission digit `perm`.
 /// 
 /// # Example
 /// 
@@ -37,7 +37,7 @@ pub const fn rm(perm: usize, n: usize) -> usize {
     perm & !(1 << n)
 }
 
-/// Check if `perm` has the permission flag `n`.
+/// Check if a flag `n` is in a permission digit `perm`.
 /// 
 /// # Example
 /// 
@@ -45,6 +45,7 @@ pub const fn rm(perm: usize, n: usize) -> usize {
 /// # use fastperm::check;
 /// 
 /// assert!(check(2, 1));
+/// assert!(!check(2, 0));
 /// assert!(!check(2, 3));
 /// ```
 #[inline]
