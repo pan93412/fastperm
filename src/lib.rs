@@ -1,19 +1,19 @@
 /// Add a permission flag (`n`) to `perm`.
 #[inline]
-pub fn add(perm: usize, n: usize) -> usize {
+pub const fn add(perm: usize, n: usize) -> usize {
     perm | 1 << n
 }
 
 // 
 /// Remove a permission flag (`n`) to `perm`.
 #[inline]
-pub fn rm(perm: usize, n: usize) -> usize {
+pub const fn rm(perm: usize, n: usize) -> usize {
     perm & !(1 << n)
 }
 
 /// Check if `perm` has the permission flag `n`.
 #[inline]
-pub fn check(perm: usize, n: usize) -> bool {
+pub const fn check(perm: usize, n: usize) -> bool {
     (perm >> n & 1) == 1
 }
 
